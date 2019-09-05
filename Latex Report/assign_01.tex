@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,marvosym,amsthm,mathtools,amsfonts}
+\setlength{\hoffset}{-50pt}
+\setlength{\voffset}{-80pt}
+\setlength{\textwidth}{500pt}
+\setlength{\textheight}{740pt}
+
+\begin{document}
+\thispagestyle{empty}
+ \begin{center}
+ \textbf{ {\Large{Assignment-1}}\\Due date: 05/09/2019\\}
+ \emph{Assume suitable values wherever necessary}
+ \end{center}
+ Find the Fourier co-efficients and hence the Fourier series
+expansion. Check for convergence by plotting the series
+and the original function. Show the details of the work.
+ \begin{enumerate}
+  \item $f(x)=x+\pi\quad \text{if}-\pi<x<\pi $\\
+%    \Lightning\quad $a_0=\pi,~a_n=0,~b_n=\dfrac{2}{n}(-1)^{n-1}$
+   
+ \item $f(x)=\sqrt{1-\cos x}\quad \text{if}-\pi<x<\pi $\\  
+% \Lightning\quad $a_0=\dfrac{2\sqrt{2}}{\pi},~a_n=\dfrac{-4\sqrt{2}}{\pi(4n^2-1)},~b_n=0$
+
+\item $f(x)=x\sin x$\\
+% \Lightning\quad $a_0=1,~a_1=-\dfrac{1}{2},~a_n=\dfrac{2(-1)^{n}}{n^2-1},~b_n=0$\qquad for 
+% $-\pi<x<\pi$\\
+% \Lightning\quad  $a_0=-1,~a_1=-\dfrac{1}{2},~a_n=\dfrac{2}{n^2-1},~b_1=\pi,~b_n=0$\qquad for 
+% $0<x<2\pi$
+
+\item $f(x)=x\cos x$
+
+%   \Lightning\quad $a_0=0,~a_n=0,~b_1=-\dfrac{1}{2},~b_n=\dfrac{2n(-1)^n}{n^2-1}$ \qquad for 
+% $-\pi<x<\pi$\\
+%  \Lightning\quad $a_0=0,~a_1=\pi,~a_n=0,~b_1=-\dfrac{1}{2},~b_n=\dfrac{-2n}{n^2-1}$ \qquad for 
+% $0<x<2\pi$
+
+\item $f(x)=\mathrm{e}^{-x}\quad \text{if}\quad 0<x<2\pi \quad\text{and} \quad f(x+2\pi)=f(x)$\\
+%   \Lightning\quad $a_0=\dfrac{1-e^{-2\pi}}{2\pi},~a_n=\dfrac{1-e^{-2\pi}}{\pi(n^2+1)},~
+% b_n=\dfrac{n(1-e^{-2\pi})}{\pi(n^2+1)}$
+
+\item Periodic function $f(x) = 
+\begin{cases} 
+\pi x &\mbox{in } 0\leq x\leq 1 \\
+\pi(2-x) & \mbox{in } 1\leq x\leq 2 
+\end{cases}$\\
+%  \Lightning\quad $a_0=\dfrac{\pi}{2},~a_n=\dfrac{2}{\pi n^2}((-1)^n-1),~b_n=0$
+ 
+\item When a sinusoidal voltage $V_0\sin\omega t$ is passed through a half wave 
+rectifier which clips the negative portion of the wave, the resulting periodic function is 
+given by \[v(t) = 
+\begin{cases} 
+\phantom{abcd} 0 &\text{for}\quad -\pi/\Omega< t< 0 \\
+V_0\sin\Omega t &\text{for}\quad 0< t< \pi/\Omega
+\end{cases}\] Develop the function.\\
+% \Lightning\quad $a_0=\dfrac{V_0}{\pi},~a_n = 
+% \begin{cases} 
+% \phantom{abcdefg} 0 &\text{if $n$ is odd}\\
+% \dfrac{-2V_0}{\pi(n+1)(n-1)} &\text{if $n$ is even}
+% \end{cases},~b_1=\dfrac{V_0}{2},~b_n=0$
+ \end{enumerate}
+
+\end{document}
+
