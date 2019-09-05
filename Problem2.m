@@ -15,9 +15,9 @@ subplot(2,1,1)
 plot(x1,fx1);
 grid minor
 xlim([-pi,pi])
-xlabel("Time(t)",'Interpreter','Latex')
-ylabel('$${f}(t)$$','Interpreter','Latex')
-title("Original Function $$f(t)=\sqrt(1-cos(x))$$",'Interpreter','Latex')
+xlabel("$$x$$",'Interpreter','Latex')
+ylabel('$${f}(x)$$','Interpreter','Latex')
+title("Original Function $$f(x)=\sqrt(1-cos(x))$$",'Interpreter','Latex')
 i=1;
 a0=0;
 f_approx1=a0;
@@ -46,9 +46,9 @@ for n=1:N1
         plot(x1,f_approx1)
         xlim([-pi,pi])
         legend_name(i,1)=strcat("Convergence Failing Harmonic ",num2str(n));
-        xlabel("Time (t)",'Interpreter','Latex')
-        ylabel('$$\hat{f}(t)$$','Interpreter','Latex')
-        title("Fourier Approximated $$f(t)$$",'Interpreter','Latex')
+        xlabel("$$x$$",'Interpreter','Latex')
+        ylabel('$$\hat{f}(x)$$','Interpreter','Latex')
+        title("Fourier Approximated $$f(x)$$",'Interpreter','Latex')
         legend(legend_name);
         grid minor
    
