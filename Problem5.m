@@ -1,31 +1,36 @@
 clear
 clc
 
-fs=1/48e3;
+fs=1/0.5e3;
 x=-10:fs:10;
 fx=zeros(length(x),1);
-%% PROBLEM 3
+%% PROBLEM 5
 my_support=x;
 my_support=my_support(my_support>0);
 my_support=my_support(my_support<2*pi);
 
 x1=my_support;
-fx1=x1.*cos(x1);
+fx1=exp(-x1);
 subplot(2,1,1)
 plot(x1,fx1);
 grid minor
 xlim([0,2*pi])
 xlabel("Time(t)",'Interpreter','Latex')
 ylabel('$${f}(t)$$','Interpreter','Latex')
-title("Original Function $$f(t)=xcos(x)$$",'Interpreter','Latex')
+title("Original Function $$f(t)=\exp(-x)$$",'Interpreter','Latex')
 i=1;
 a0=(1-exp(-2*pi))/(2*pi);
 f_approx1=a0;
-N1=1000;
-for n=2:N1
-    an1=(1-exp(-2*pi))./((n.^2-1)*pi);
-    bn1=(n.*(1-exp(-2*pi)))./((n.^2+1)*pi);
+N1=30000;
+for n=1:N1
     
+    an1=(1-exp(-2*pi))./(((n.^2)-1)*pi);
+    bn1=(n.*(1-exp(-2*pi)))./(((n.^2)+1)*pi);
+    
+    if n==1
+        an1=0.1588577;
+        bn1=0.1588577;
+    end
     cosine_term=cos(n*x1).*an1;
     sine_term=sin(n*x1).*bn1;
     %Plotting
